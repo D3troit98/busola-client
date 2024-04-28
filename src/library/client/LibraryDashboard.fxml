@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/21">
+	<top>
+		<HBox alignment="CENTER_RIGHT" spacing="10"
+			style="-fx-padding: 10;">
+			<Label fx:id="welcomeLabel" />
+			<Button onAction="#handleLogout" text="Logout" />
+			<Button onAction="#handleQuit" text="Quit" />
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</HBox>
+	</top>
+
+	<center>
+		<VBox spacing="10" style="-fx-padding: 5;">
+			<!-- Catalog Search -->
+			<HBox spacing="10">
+				<TextField fx:id="searchField"
+					promptText="Search catalog..." />
+				<Button onAction="#handleSearch" text="Search" />
+			</HBox>
+
+			<!-- Catalog Display -->
+			<TableView fx:id="catalogTableView" prefHeight="300.0"
+				prefWidth="500.0">
+				<columns>
+					<TableColumn fx:id="titleColumn" text="Title" />
+					<TableColumn fx:id="authorColumn" text="Author" />
+					<TableColumn fx:id="typeColumn" text="Type" />
+					<TableColumn fx:id="availableColumn" text="Available" />
+					<!-- Add the review number column -->
+					<TableColumn fx:id="ratingColumn" text="Item Rating" />
+					<!-- Add the hold count column -->
+					<TableColumn fx:id="holdCountColumn" text="Hold Count" />
+				</columns>
+			</TableView>
+
+			<!-- Actions -->
+			<HBox spacing="10">
+				<Button onAction="#handleBorrow" text="Borrow" />
+				<!-- Add the refresh button here -->
+				<Button onAction="#handleRefresh" text="Refresh" />
+
+				<Button onAction="#handleAddToHoldList"
+					text="Add to Hold List" />
+			</HBox>
+
+		</VBox>
+	</center>
+
+	<bottom>
+		<VBox spacing="10">
+			<!-- Add a hyperlink for the borrowed history -->
+			<Hyperlink onAction="#handleViewBorrowedHistory"
+				text="View Borrowed History" />
+
+			<Hyperlink onAction="#handleViewBorrowedItems"
+				text="View Your Items" />
+
+			<Hyperlink onAction="#goToGlobalChats"
+				text="Go to Global Chats" />
+		</VBox>
+	</bottom>
+</BorderPane>

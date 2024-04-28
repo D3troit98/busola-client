@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFx21"/>
+	<classpathentry excluding="resources/" kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/jar_files/json-20240303.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/jar_files/controlsfx-11.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/jar_files/scenebuilder-8.5.0-all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/jar_files/slf4j-api-2.0.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/bson-5.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/mongodb-driver-sync-5.0.1.jar"/>
+	<classpathentry kind="lib" path="src/resources"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/bcpkix-jdk18on-1.76.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/bcprov-ext-jdk18on-1.76.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/bcprov-jdk18on-1.76.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/bcutil-jdk18on-1.76.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/common-image-3.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/common-io-3.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/common-lang-3.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/fontbox-2.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/icepdf-core-7.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/icepdf-viewer-7.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/imageio-core-3.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/imageio-metadata-3.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/imageio-tiff-3.9.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/icespice/jbig2-imageio-3.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/jai-1_1_2_01/lib/mlibwrapper_jai.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/jar_files/jai-imageio-core-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/pdf4j-icepdf-6.1.1-10-g3bca3bd/jar_files/jai-imageio-jpeg2000-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/selenium-server-4.20.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/durua/Downloads/testng-7.10.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

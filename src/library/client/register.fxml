@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane minHeight="400.0" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.client.RegisterController">
+    <center>
+        <VBox alignment="CENTER" prefHeight="398.0" prefWidth="400.0" spacing="5" style="-fx-background-color: #f5f5f5; -fx-padding: 15;">
+            <!-- Title -->
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Register" textAlignment="CENTER" />
+            
+            <!-- Username Input -->
+            <VBox spacing="5">
+                <Label text="Username" />
+                <HBox>
+                    <ImageView fitHeight="29.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../resources/images/username_icon.png" />
+                        </image>
+                    </ImageView>
+                    <TextField fx:id="usernameField" prefHeight="26.0" prefWidth="334.0" promptText="Enter your username" />
+                </HBox>
+            </VBox>
+            
+            <!-- Email Input -->
+            <VBox spacing="5">
+                <Label text="Email" />
+                <HBox>
+                    <ImageView fitHeight="29.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../resources/images/email_icon.png" />
+                        </image>
+                    </ImageView>
+                    <TextField fx:id="emailField" prefHeight="26.0" prefWidth="332.0" promptText="Enter your email" />
+                </HBox>
+            </VBox>
+            
+            <!-- Password Input -->
+            <VBox spacing="5">
+                <Label text="Password" />
+                <HBox>
+                    <ImageView fitHeight="29.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../resources/images/password.png" />
+                        </image>
+                    </ImageView>
+                    <PasswordField fx:id="passwordField" prefHeight="26.0" prefWidth="330.0" promptText="Enter your password" />
+                </HBox>
+            </VBox>
+            
+            <!-- Confirm Password Input -->
+            <VBox spacing="5">
+                <Label text="Confirm Password" />
+                <HBox>
+                    <ImageView fitHeight="29.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../resources/images/password.png" />
+                        </image>
+                    </ImageView>
+                    <PasswordField fx:id="confirmPasswordField" prefHeight="26.0" prefWidth="326.0" promptText="Re-enter your password" />
+                </HBox>
+            </VBox>
+            
+            <!-- Register Button -->
+            <Button fx:id="registerButton" onAction="#register" prefHeight="46.0" prefWidth="138.0" style="-fx-font-size: 16px; -fx-padding: 10 20; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="Register" />
+            
+            <!-- Hyperlink -->
+            <Hyperlink onAction="#goToLogin" style="-fx-text-fill: #0073e6;" text="Already have an account? Login here" />
+        </VBox>
+    </center>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</BorderPane>

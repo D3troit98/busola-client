@@ -1,0 +1,24 @@
+<!ELEMENT BorderPane (top,center,bottom)>
+<!ELEMENT top (HBox)>
+<!ELEMENT HBox (Label?,Button+,TextField?)>
+<!ATTLIST HBox alignment NMTOKEN #IMPLIED>
+<!ATTLIST HBox spacing NMTOKEN #REQUIRED>
+<!ELEMENT Label EMPTY>
+<!ATTLIST Label text CDATA #IMPLIED>
+<!ELEMENT Button EMPTY>
+<!ATTLIST Button text NMTOKEN #REQUIRED>
+<!ATTLIST Button onAction CDATA #REQUIRED>
+<!ELEMENT center (VBox)>
+<!ELEMENT VBox (HBox*,TableView?,Label?,ListView?)>
+<!ATTLIST VBox spacing NMTOKEN #REQUIRED>
+<!ELEMENT TextField EMPTY>
+<!ATTLIST TextField promptText CDATA #REQUIRED>
+<!ELEMENT TableView (TableColumn+)>
+<!ATTLIST TableView prefHeight NMTOKEN #REQUIRED>
+<!ATTLIST TableView prefWidth NMTOKEN #REQUIRED>
+<!ELEMENT TableColumn EMPTY>
+<!ATTLIST TableColumn text NMTOKEN #REQUIRED>
+<!ELEMENT bottom (VBox)>
+<!ELEMENT ListView EMPTY>
+<!ATTLIST ListView prefHeight NMTOKEN #REQUIRED>
+<!ATTLIST ListView prefWidth NMTOKEN #REQUIRED>

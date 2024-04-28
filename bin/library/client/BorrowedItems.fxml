@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" spacing="10" >
+    <Label text="Your Borrowed Items" />
+
+    <!-- Borrowed Items Display -->
+    <ListView fx:id="borrowedItemsListView" prefHeight="300.0" prefWidth="500.0" />
+
+<Button text="Add Rating" onAction="#handleAddRating" />
+    <!-- Actions -->
+    <HBox spacing="10">
+        <Button text="Read" onAction="#handleRead" />
+        <Button text="Return" onAction="#handleReturn" />
+          <Button fx:id="backButton" text="Back" onAction="#handleBack" prefWidth="100" />
+    </HBox>
+
+    <!-- Hyperlink to view borrowed history -->
+    <Hyperlink text="View Borrowed History" onAction="#handleViewBorrowedHistory" />
+</VBox>

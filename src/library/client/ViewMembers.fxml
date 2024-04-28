@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.client.ViewMembersController" prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <VBox alignment="CENTER" spacing="10.0" >
+            <Label text="View Library Members" textAlignment="CENTER">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" >
+            <TableView fx:id="membersTableView" prefHeight="300.0" prefWidth="580.0">
+            	<columns>
+                	<TableColumn fx:id="memberIdColumn" text="Member ID" prefWidth="150.0" />
+                	<TableColumn fx:id="usernameColumn" text="Username" prefWidth="150.0" />
+                	<TableColumn fx:id="emailColumn" text="Email" prefWidth="150.0" />
+                	<TableColumn fx:id="statusColumn" text="Status" prefWidth="150.0" />
+                </columns>
+            </TableView>
+            <Button text="Toggle Suspend Member" onAction="#suspendSelectedMember"  fx:id="suspendMemberButton"/>
+            <Button text="Delete Selected Member" onAction="#deleteSelectedMember" fx:id="deleteMemberButton"/>
+            <Button text="Back to Dashboard" onAction="#goBackToDashboard"  fx:id="backDashboardButton"/>
+        </VBox>
+    </center>
+</BorderPane>

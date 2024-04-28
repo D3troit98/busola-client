@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+<body>
+    <h1>PDF Viewer</h1>
+    <canvas id="pdfCanvas"></canvas>
+    <script>
+        // Define a function to display a PDF
+        function displayPdf(base64Content) {
+            // Convert the Base64 string to a Uint8Array
+            const binaryString = atob(base64Content);
+            const len = binaryString.length;
+            const uint8Array = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                uint8Array[i] = binaryString.charCodeAt(i);
+            }
+
+            // Load the PDF file
+            const loadingTask = pdfjsLib.getDocument(uint8Array);
+            loadingTask.promise.then(pdf => {
+                // Once the PDF is loaded, render the first page
+                pdf.getPage(1).then(page => {
+                    const scale = 1.5;
+                    const viewport = page.getViewport({ scale: scale });
+
+                    const canvas = document.getElementById('pdfCanvas');
+                    const context = canvas.getContext('2d');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

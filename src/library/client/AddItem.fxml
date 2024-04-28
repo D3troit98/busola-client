@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.stage.FileChooser?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="library.client.AddItemController" alignment="CENTER"
+	spacing="10" prefHeight="400.0" prefWidth="600.0">
+	<Label text="Add Catalog Item" textAlignment="CENTER"
+		style="-fx-font-size: 20px;" />
+
+	<!-- Form for adding catalog item -->
+	<VBox spacing="10">
+		<!-- Title field with label -->
+		<Label text="Item Title" />
+		<TextField fx:id="titleField" promptText="Enter title" />
+
+		<!-- Author field with label -->
+		<Label text="Author" />
+		<TextField fx:id="authorField" promptText="Enter author" />
+
+		<!-- Type field with label and ComboBox -->
+		<Label text="Type" />
+
+		<ComboBox fx:id="typeComboBox" promptText="Select type">
+		</ComboBox>
+		<!-- File upload button with label -->
+		<Label text="File" />
+		<Button fx:id="fileUploadButton" text="Upload File"
+			onAction="#handleFileUpload" />
+
+		<!-- You can add a TextField or Label to display the chosen file name -->
+		<Label fx:id="fileNameLabel" />
+		<!-- Description for file size limit -->
+		<Label
+			text="Note: Only PDF files under 5mb are allowed when you want to upload file"
+			style="-fx-font-style: italic; color: gray;" />
+	</VBox>
+
+	<Button text="Add Item" onAction="#handleAddItem"
+		fx:id="addItemButton" />
+
+	<!-- Back button to navigate back to View Items -->
+	<Button text="Back to View Items" onAction="#goBackToViewItems"
+		fx:id="backButton" />
+</VBox>
